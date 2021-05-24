@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 		tools {
-        maven 'Maven_Latest' 
+        maven 'maven_3.8.1' 
     }
 		stages {
 				stage ('Clean Stage') {
