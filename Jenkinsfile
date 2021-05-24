@@ -1,16 +1,13 @@
 pipeline {
 	agent any
 		tools {
-        maven 'maven_3.8.1' 
+        maven 'Maven_Latest' 
+        maven 'MAVEN_HOME' 
     }
 		stages {
-				stage ('Clean Stage') {
+				stage ('Compile Stage') {
 					steps {
-							bat 'mvn clean'
-					}
-			}	stage ('Compile Stage') {
-					steps {
-							bat 'mvn compile'
+							bat 'mvn clean compile'
 					}
 			}
 				stage ('Install Stage') {
@@ -19,4 +16,4 @@ pipeline {
 						}
 					}
 				}
-	}		
+	}
