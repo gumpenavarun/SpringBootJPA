@@ -4,9 +4,13 @@ pipeline {
         maven 'MAVEN_HOME' 
     }
 		stages {
-				stage ('Compile Stage') {
+				stage ('Clean Stage') {
 					steps {
-							bat 'mvn clean compile'
+							bat 'mvn clean'
+					}
+			}	stage ('Compile Stage') {
+					steps {
+							bat 'mvn compile'
 					}
 			}
 				stage ('Install Stage') {
